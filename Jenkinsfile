@@ -3,10 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Build number: ${env.BUILD_NUMBER}"
-                echo "Build Name: ${env.BRANCH_NAME}"
-                echo "Change ID: ${env.CHANGE_ID}"
-                sh 'npm --version'
+                echo sh(returnStdout: true, script: 'env')
+                sh 'printenv'
+                echo sh(script: 'env|sort', returnStdout: true)
             }
         }
     }
