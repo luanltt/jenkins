@@ -4,8 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello Jenkins"
-                sh 'printenv'
-                sh 'ls -l'
+                sh 'npm install'
+                sh './node_modules/.bin/eslint index.js'
             }
         }
     }
