@@ -1,1 +1,3 @@
-let unuse = true;
+var name = "Bob";
+
+alert(name);
