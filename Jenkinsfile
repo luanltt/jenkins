@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "hello test jenkins"
+                echo "Hello Jenkins"
                 sh 'printenv'
             }
         }
