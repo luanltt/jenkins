@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello Jenkins"
+                echo "feature6"
                 sh 'printenv'
             }
         }
