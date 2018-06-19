@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "Hello Jenkins"
                 sh 'printenv'
+                echo "end"
             }
         }
     }
