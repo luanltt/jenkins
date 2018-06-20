@@ -10,8 +10,6 @@ pipeline {
         }
     }
         post {
-        always {
-        }
         success {
             slackSend color: "#3399ff", channel:"#test-jenkins", message: "build successfully"
         }
