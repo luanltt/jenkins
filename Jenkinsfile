@@ -9,4 +9,14 @@ pipeline {
             }
         }
     }
+        post {
+        always {
+        }
+        success {
+            slackSend color: "#3399ff", channel:"#test-jenkins", message: "build successfully"
+        }
+        failure {
+            slackSend color: "#ff3366", channel:"#test-jenkins", message: "build failed"
+        }
+    }
 }
