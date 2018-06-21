@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello Jenkins"
+                echo "feature 12"
                 sh 'npm install'
                 sh './node_modules/.bin/eslint index.js'
             }
